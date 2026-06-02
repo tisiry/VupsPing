@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "vupsping",
+  "version": "1.0.0",
+  "name": "VupsPing",
+  "description": "Мод на отображение FPS, TPS, координат и пинга",
+  "authors": ["tisiry"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/boxall/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "tisiry.VupsbetterClient"
+    ],
+    "modmenu": [
+      "tisiry.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "~1.19.2",
+    "java": ">=17"
+  }
+}

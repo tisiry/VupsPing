@@ -3,7 +3,7 @@
   "id": "vupsping",
   "version": "1.0.0",
   "name": "VupsPing",
-  "description": "Мод на отображение FPS, TPS, координат и пинга",
+  "description": "It displays fps, ping, coordinates, tps \n W - increase size\nS - reduce size\n\nYou can drag them by holding down the button and double-click to disable them",
   "authors": ["tisiry"],
   "contact": {},
   "license": "MIT",

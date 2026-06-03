@@ -32,7 +32,7 @@ public class MoveHudScreen extends Screen {
         MinecraftClient client = MinecraftClient.getInstance();
         TextRenderer renderer = this.textRenderer;
 
-        // ОСТАВЛЕНО: Только жёлтая надпись мода по центру экрана
+       
         drawCenteredString(matrices, renderer, "VupsPing — Настройка интерфейса", this.width / 2, 10, 0xFFAA00);
 
         float scale = ModConfig.hudScale * 1.4f;

@@ -19,8 +19,6 @@ public class HudRenderer {
 
             TextRenderer renderer = client.textRenderer;
             int baseColor = 0xFFFFFF;
-
-            // ИСПРАВЛЕНО: Добавлен точно такой же множитель 1.4f для игры, чтобы размеры совпадали один в один
             float finalScale = ModConfig.hudScale * 1.4f;
 
             String[] texts = new String[]{

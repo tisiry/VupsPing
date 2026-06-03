@@ -38,7 +38,6 @@ public class HudData {
         return 0;
     }
 
-    // ИСПРАВЛЕНО: Расчёт цвета по точке прицела (Блок или Небо)
     public static int getAdaptiveColor(MinecraftClient client) {
         if (client.world == null || client.player == null) return 0xFFFFFF;
 
@@ -48,14 +47,11 @@ public class HudData {
         if (hit != null && hit.getType() == HitResult.Type.BLOCK) {
             targetPos = ((BlockHitResult) hit).getBlockPos();
         } else {
-            // Если смотрим в небо, берём позицию над головой игрока для оценки света неба
             targetPos = client.player.getBlockPos().up(5);
         }
 
         int blockLight = client.world.getLightLevel(LightType.BLOCK, targetPos);
         int skyLight = client.world.getLightLevel(LightType.SKY, targetPos);
-
-        // Во время дневного неба skyLight равен 15 (максимум), наводимся на небо -> текст станет тёмным
         int currentLight = Math.max(blockLight, skyLight);
         return (currentLight > 8) ? 0x222222 : 0xFFFFFF;
     }

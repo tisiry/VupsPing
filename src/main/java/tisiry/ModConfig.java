@@ -12,8 +12,6 @@ public class ModConfig {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public static float hudScale = 1.0f;
-
-    // ИСПРАВЛЕНО: Более удобные дефолтные позиции (сдвинуты по горизонтали, чтобы не слипались при первом запуске)
     public static int xyzX = 10, xyzY = 10;
     public static int fpsX = 110, fpsY = 10;
     public static int pingX = 210, pingY = 10;
@@ -49,7 +47,6 @@ public class ModConfig {
 
     public static void save() {
         try {
-            // Защита: создаем родительские папки, если конфигурационной директории ещё нет
             File parent = FILE.getParentFile();
             if (parent != null && !parent.exists()) {
                 parent.mkdirs();
@@ -75,7 +72,6 @@ public class ModConfig {
 
     private static class ConfigData {
         float hudScale = 1.0f;
-        // Изменяем значения и во внутреннем классе сериализатора GSON
         int xyzX = 10, xyzY = 10;
         int fpsX = 110, fpsY = 10;
         int pingX = 210, pingY = 10;

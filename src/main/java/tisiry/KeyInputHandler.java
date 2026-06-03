@@ -10,7 +10,6 @@ public class KeyInputHandler {
     public static KeyBinding moveHudKey;
 
     public static void register() {
-        // Оставляем только одну кнопку K для открытия меню настроек
         moveHudKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "Настройка HUD",
                 InputUtil.Type.KEYSYM,

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "vupsping",
+  "version": "1.0.0",
+  "name": "VupsPing",
+  "description": " S - reduce sizen \n  W - increase size,\n  You can drag them by holding down the button and double-click to disable them ",
+
+  "authors": ["tisiry"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/boxall/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "tisiry.VupsbetterClient"
+    ],
+    "modmenu": [
+      "tisiry.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader":">=0.15.11",
+    "minecraft": ">=1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
